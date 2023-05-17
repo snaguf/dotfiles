@@ -1,0 +1,8 @@
+[user]
+	email = joonas@snaguf.tech
+	name = Joonas Nordlund
+	signingkey = A8CE33CD8838F25F
+[commit]
+	gpgsign = true
+[init]
+	defaultBranch = main
