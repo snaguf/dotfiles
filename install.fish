@@ -19,12 +19,14 @@ set -a formulas python
 set -a formulas tmux
 set -a formulas neovim
 set -a formulas lazygit tree-sitter ripgrep
-set -a formulas gnugpg
+set -a formulas gnupg
 set -a formulas yubikey-agent
 set -a formulas unison
 
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher update
+
+brew tap homebrew/cask-fonts
 
 brew install $formulas
 brew install --cask $casks

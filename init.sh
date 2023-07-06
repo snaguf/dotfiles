@@ -10,7 +10,12 @@ fi
 NONINTERACTIVE=1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Install fish shell and add it as default shell
 brew install fish
 which fish | sudo tee -a /etc/shells
-which fish | chsh -s
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+chsh -s "$(which fish)"

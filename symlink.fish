@@ -25,6 +25,7 @@ function symlink --argument target --argument destination
         # If destination file already exists, do nothing
         if test -e "$destination/$target"
             echo "Destination file $destination/$target already exists"
+            ln -si $DOTFILES/$target $destination/$target
         
         # If everything is ok, create symlink between target and destination
         else
@@ -41,3 +42,6 @@ end
 symlink kitty $CONFIG
 symlink fish $CONFIG
 symlink nvim  $CONFIG
+symlink git $CONFIG
+symlink tmux $CONFIG
+symlink .ssh $HOME
